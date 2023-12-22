@@ -5,6 +5,7 @@ enable_language(CUDA) # Enables CUDA
 find_package(CUDAToolkit REQUIRED) # Finds CUDA Toolkit and sets CUDA_TOOLKIT_ROOT_DIR
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 set(CMAKE_CXX_STANDARD 17) # Requires C++17 standard
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}) # Sets binary output directory
 
 add_subdirectory(raylib)
 add_executable(${PROJECT_NAME} src/main.cpp src/kernel.cu)
